@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/usr/CLionProjects/Operating-System/MINT64/00.BootLoader/disk_read.c
+stdio.h
+-
+
+/usr/CLionProjects/Operating-System/MINT64/main.c
+stdio.h
+-
+
