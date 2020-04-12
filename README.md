@@ -19,7 +19,7 @@ We developed in the following environment. We created [docker images](https://hu
 	* and so on...
 
 
-# 3. Get Docker Engine
+# 3. Get related package(Docker Engine, qemu)
 1. install Docker
 
 ```sh
