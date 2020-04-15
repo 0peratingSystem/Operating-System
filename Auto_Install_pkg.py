@@ -15,3 +15,5 @@ docker run -it koreasecurity/dev:os_dev
 #3. install autobuild requirements
 sudo apt-get -y install python3
 pip3 install -r requirements.txt
+
+pip3 install termcolor
