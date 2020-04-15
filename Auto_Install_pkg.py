@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Install for execute Auto_Build_Prototype.py script
+
 #1.install Docker
 sudo apt-get update -y
 sudo apt-get install  -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
