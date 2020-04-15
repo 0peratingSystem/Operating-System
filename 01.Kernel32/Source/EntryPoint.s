@@ -1,9 +1,3 @@
-# file      EntryPoint.s
-# date      2008/11/27
-# author    kkamagui 
-#           Copyright(c)2008 All rights reserved by kkamagui
-# brief     보호 모드 커널 엔트리 포인트에 관련된 소스 파일
-
 [ORG 0x00]          ; 코드의 시작 어드레스를 0x00으로 설정
 [BITS 16]           ; 이하의 코드는 16비트 코드로 설정
 
@@ -17,7 +11,7 @@ START:
                     ; 세그먼트 레지스터 값으로 변환
     mov ds, ax      ; DS 세그먼트 레지스터에 설정
     mov es, ax      ; ES 세그먼트 레지스터에 설정
-    
+
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ; A20 게이트를 활성화
     ; BIOS를 이용한 전환이 실패했을 때 시스템 컨트롤 포트로 전환 시도
@@ -36,7 +30,7 @@ START:
     and al, 0xFE    ; 시스템 리셋 방지를 위해 0xFE와 AND 연산하여 비트 0를 0으로 설정
     out 0x92, al    ; 시스템 컨트롤 포트(0x92)에 변경된 값을 1 바이트 설정
     
-.A20GATESUCCESS:
+.A20GATESUCCESS:    
     cli             ; 인터럽트가 발생하지 못하도록 설정
     lgdt [ GDTR ]   ; GDTR 자료구조를 프로세서에 설정하여 GDT 테이블을 로드
 
@@ -184,7 +178,7 @@ GDT:
         db 0x92         ; P=1, DPL=0, Data Segment, Read/Write
         db 0xAF         ; G=1, D=0, L=1, Limit[19:16]
         db 0x00         ; Base [31:24]
-        
+
     ; 보호 모드 커널용 코드 세그먼트 디스크립터
     CODEDESCRIPTOR:     
         dw 0xFFFF       ; Limit [15:0]

@@ -1,11 +1,3 @@
-/**
- *  file    Types.h
- *  date    2008/12/28
- *  author  kkamagui 
- *          Copyright(c)2008 All rights reserved by kkamagui
- *  brief   페이징에 관련된 각종 정보를 정의한 파일
- */
-
 #include "Page.h"
 
 /**

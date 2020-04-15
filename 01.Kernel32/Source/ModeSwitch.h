@@ -3,7 +3,13 @@
 
 #include "Types.h"
 
-void kRead_CPU_ID(DWORD dwEAX, DWORD* pdwEAX, DWORD *pdwEBX, DWORD *pdwECX, DWORD * pdwEDX);
-void kSwitch_And_Execute_64bit_Kernel(void);
+////////////////////////////////////////////////////////////////////////////////
+//
+//  함수
+//
+////////////////////////////////////////////////////////////////////////////////
+void kReadCPUID( DWORD dwEAX, DWORD* pdwEAX, DWORD* pdwEBX, DWORD* pdwECX, 
+        DWORD* pdwEDX );
+void kSwitchAndExecute64bitKernel( void );
 
 #endif /*__MODESWITCH_H__*/
